@@ -1,24 +1,20 @@
 package Models;
 
 public class Encoding {
-    public static String Encyption(String cipher,int shift){
-        String c = cipher.toLowerCase();
-        char chr [] = c.toCharArray();
-        int key = shift;
+    static String alphabet = "abcdefghijklmnopqrstuvwxyz";
 
-        int index;
-        String str="";
-        char plain;
+    public static String encoding(String plainText, int key) {
+        plainText = plainText.toLowerCase();
+        String store = "";
+        for (int i = 0; i < plainText.length(); i++) {
+            int charIndex = alphabet.indexOf(plainText.charAt(i));
+            int newIndex = (charIndex + key) % 26;
+            char cipherChar = alphabet.charAt(newIndex);
+            store = store + cipherChar;
 
-        for (int i = 0; i < chr.length; i++){
-
-            index = chr[i] -97;
-            index = (index - key + 26) % 26;
-            plain = (char) (index + 97);
-            str = str + plain;
         }
-        return str;
-    }
 
+        return store;
+    }
 
 }

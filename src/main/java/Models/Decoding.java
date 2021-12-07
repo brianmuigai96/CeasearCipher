@@ -1,22 +1,24 @@
 package Models;
 
 public class Decoding {
-    public String decryption(String cipher, int shift) {
-        String c = cipher.toLowerCase();
-        char chr [] = c.toCharArray();
-        int key = shift;
 
-        int index;
-        String str="";
-        char plain;
+    static String alphabet = "abcdefghijklmnopqrstuvwxyz";
 
-        for (int i = 0; i < chr.length; i++){
+    public  String decoding(String decodeText, int key) {
+        decodeText = decodeText.toLowerCase();
+        decodeText = "";
+        for (int i = 0; i < decodeText.length(); i++) {
+            int charIndex = alphabet.indexOf(decodeText.charAt(i));
+            int newIndex = (charIndex - key) % 26;
+            if (newIndex < 0) {
+                newIndex = alphabet.length() + newIndex;
+            }
+            char plainChar = alphabet.charAt(newIndex);
+            decodeText = decodeText + plainChar;
 
-            index = chr[i] -97;
-            index = (index - key + 26) % 26;
-            plain = (char) (index + 97);
-            str = str + plain;
         }
-        return str;
+
+        return decodeText;
+
     }
 }
