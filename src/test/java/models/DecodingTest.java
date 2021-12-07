@@ -9,7 +9,7 @@ import static org.junit.Assert.assertEquals;
 
 public class DecodingTest {
     @Test
-    public void ceaserCipher_instanceof_Object() {
+    public void decoding_instanceof_Object() {
         Decoding newDecoding = new Decoding();
         assertTrue(newDecoding instanceof Decoding);
     }
