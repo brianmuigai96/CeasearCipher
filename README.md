@@ -1,5 +1,5 @@
 # Caesar-Cipher java app
-###By Brian Muigai
+By Brian Muigai
 
 ## DESCRITPTION
 In "cryptography", a Caesar cipher is one of the simplest and most widely known encryption techniques, which this Java App utilises.
