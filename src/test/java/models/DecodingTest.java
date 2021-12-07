@@ -10,12 +10,10 @@ public class DecodingTest {
 
     @Test
     public void encoding_allUpperCase_String() {
-        Decoding newdecoding = new Decoding();
+        Decoding newDecoding = new Decoding();
         String decodeText = "";
-        assertEquals(decodeText, newdecoding.decoding("MOMBASA",1) );
+        assertEquals(decodeText, newDecoding.decoding("MOMBASA",1) );
     }
-
-
 
 
 }
