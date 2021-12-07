@@ -19,4 +19,6 @@ public class EncodingTest {
         String plainText = "";
         assertEquals(plainText, newencoding.encoding("MOMBASA",1) );
     }
+
+
 }
